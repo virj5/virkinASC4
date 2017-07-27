@@ -98,21 +98,18 @@ fill("red");
     "hp" : 266, "attack": 84};
     var pikachu = {"name": "Pikachu",
     "move1": "Iron Tail","move2":"Thunder Bolt",
-    "hp": 150, "attack": 95};
+    "hp": 230, "attack": 95};
     var chHp = charizard.hp;
     var pikHp = pikachu.hp;
     var pikAttack = pikachu.attack;
-function mouseClicked()
-{
-    if (mouseX > 700 && mouseX < 900 && mouseY > 630 && mouseY < 685)
-    {
+function mouseClicked(){
+    if (mouseX > 700 && mouseX < 900 && mouseY > 630 && mouseY < 685){
         console.log("Charizard's was decreased by 95!");
         chHp = chHp - pikAttack;
-        
-        
-    }
     
-    return false;
- }
-  
-  
+        (chHp<=0 && chHp == 0)
+        console.log("Charizard has fainted!");
+    }    
+    return false;    
+
+}
