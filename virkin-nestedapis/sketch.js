@@ -1,4 +1,4 @@
-$.ajax({
+c$.ajax({
   url: 'https://randomuser.me/api/',
   dataType: 'json',
   success: function(data) {
@@ -8,6 +8,6 @@ $.ajax({
         var picture = data.results[0].picture;
         $("body").append("<h2>This is "+userFirstName + " " +userLastName);
         $("body").append("<img src =https://randomuser.me/api/portraits/med/men/83.jpg></img>")
-        $("body").append("<img src =https://randomuser.me/api/portraits/med/women/83.jpg></img>")
+        
   }
 });
