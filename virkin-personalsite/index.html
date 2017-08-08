@@ -1,7 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
+	
 	<title>Virkin Jimenez- A Step Closer to Success</title>
+
+	
+<meta name="google-signin-scope" content="profile email">
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+
+    <meta name="google-signin-client_id" content="902173204749-3j6opk5ulk6aj7a29sqasiv96ncekjt5.apps.googleusercontent.com">
+
+
+	
 <script
   src="https://code.jquery.com/jquery-3.2.1.js"
   integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
@@ -16,12 +26,31 @@
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 <link href="main.css" rel="stylesheet" type="text/css" />
+
 </head>
 <body>
+
+ <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
+
+
+<a href="#" onclick="signOut();">Sign out</a>
+<script>
+  function signOut() {
+    var auth2 = gapi.auth2.getAuthInstance();
+    auth2.signOut().then(function () {
+      console.log('User signed out.');
+    });
+  }
+</script>
+
+
+
+
+
 <div id="wrapper">
     
 	<div id="header">
-		<div id="nav"><a href="index.html">Home</a> | <a href="#">About Me</a> | <a href="#">Contact Me</a> | <a href="#">My Projects</a></div>
+		<div id="nav"><a href="index.html">Home</a> | <a href="#">About Me</a> | <a href="https://www.linkedin.com/in/virkin-jimenez-263173142/">Contact Me</a> | <a href="https://github.com/virkinASC4/virkinASC4">My Projects</a></div>
 		<div id="bg"></div>
 	</div>
 	
@@ -52,8 +81,7 @@
 			</p1>
 		</div>
 		<div id="right-column">
-			<div id="main-image"><img src="https://lh5.googleusercontent.com/MMFgCqTQpHInvjqGPtdLDZNjEtPSjZ-tKycdUHQVfcGIyp-x4xw9A9RYPrfBUAzT9vATUWzJl3QpJ6M=w2698-h1508-rw
-" width="180" height="320" /></div>
+			<div id="main-image"><img src="https://lh3.googleusercontent.com/tojCR0omqwzfWSgbgh1Ua-ejxHQKG-gpDyd3oFJgftY_OJ0g1PiL685KH5wonmyh7nU8Jc-XcgoeTBs=w2528-h1446-rw" width="180" height="320" /></div>
 			<div class="sidebar">
 				<h3>Synopsis About Me</h3>
 				<p>My name is Virkin Jimenez. And I love playing sports, specifically American Football.</p>
@@ -69,6 +97,24 @@
 			</div>
 		</div>
 	</div>
+
+
+	</div>
+		<div id="other-column">
+			<div class="sidebar2">
+				<h3>In need of Motivation, Watch THIS!</h3>
+				<div class="box">
+					<ul>
+						<iframe width="450" height="315" src="https://www.youtube.com/embed/g-jwWYX7Jlo" frameborder="0" allowfullscreen></iframe>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+
 	<div id="footer">
 		Copyright &copy; 2017 Virkin Jimenez. All rights reserved.<br/>
 		Layout adapted from <a href="http://www.web-designers-directory.org/" target="_blank">Web Designers' Directory</a>.

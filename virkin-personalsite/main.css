@@ -51,11 +51,22 @@ p1 {
 	width:270px;
 	float:right;
 }
+#other-column {
+	width:560px;
+	float:right;
+}
 
 .sidebar {
 	width:218px;
 	margin:0 auto;
 	padding:10px 25px;
+	background:url('http://img404.imageshack.us/img404/3092/shadowh.jpg') no-repeat top;
+}
+
+.sidebar2 {
+	width:500px;
+	margin:0 auto;
+	padding:10px 2px;
 	background:url('http://img404.imageshack.us/img404/3092/shadowh.jpg') no-repeat top;
 }
 
@@ -141,4 +152,11 @@ ul {
 	margin-bottom:20px;
 	font:normal 18px Georgia, serif;
 	color:#fa7393;
+}
+
+#Vi {
+	margin: auto;
+    width: 50%;
+    border: 3px solid green;
+    padding: 10px;
 }
