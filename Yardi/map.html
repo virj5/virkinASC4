@@ -1,0 +1,196 @@
+<!DOCTYPE HTML>
+<!--
+	Snapshot by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html>
+	<head>
+		<title>Yardi</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="google-signin-client_id" content="128648529595-56tgv4crjinms8j3ctp3a7mq6mfmrvbp.apps.googleusercontent.com">
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://apis.google.com/js/platform.js" async defer></script>
+        <script src="https://www.gstatic.com/firebasejs/4.2.0/firebase.js"></script>
+        
+
+
+
+
+
+
+<!-- DO NOT LOSE THIS SHIT THIS UR GOOGLE CLIENT ID : 128648529595-0sjh8buoc2etr6a07a6me3r7d46iaprd.apps.googleusercontent.com-->
+<!-- DON'T LOSE THIS EITHER BUT IT'S NOT AS IMPORTANT CLIENT SECRET KEY : XQpDjujeVLHN-w6himc4JIvF-->
+	
+	
+	
+	<style>
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+      #map {
+        height: 20%;
+      }
+      /* Optional: Makes the sample page fill the window. */
+      html, body {
+        height: 20%;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+
+
+		
+	</head>
+	<body>
+		<div class="page-wrap">
+
+			
+							<div class="signs">
+       									<center> <div class="g-signin2" id="sign-in" data-onsuccess="onSignIn"></div></center>
+        								<a href="#" class="signOut" id="sign-out" onclick="onSignOut();">Sign out</a>
+    </div>
+						</section>
+												
+  <div id="map"></div>
+  <button id="AmiristheTruth" onclick="addparty();">Find Parties</button>
+
+    <script>
+      // Note: This example requires that you consent to location sharing when
+      // prompted by your browser. If you see the error "The Geolocation service
+      // failed.", it means you probably did not give permission for the browser to
+      // locate you.
+      var map, infoWindow, andy;
+      function initMap() {
+        map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: -34.397, lng: 150.644},
+          zoom: 12
+        });
+        infoWindow = new google.maps.InfoWindow;
+
+        // Try HTML5 geolocation.
+        if (navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(function(position) {
+            var pos = {
+              lat: position.coords.latitude,
+              lng: position.coords.longitude
+            };
+
+            infoWindow.setPosition(pos);
+            infoWindow.setContent('Your Location');
+            infoWindow.open(map);
+            map.setCenter(pos);
+          }, function() {
+            handleLocationError(true, infoWindow, map.getCenter());
+          });
+        } else {
+          // Browser doesn't support Geolocation
+          handleLocationError(false, infoWindow, map.getCenter());
+        }
+      }
+
+      function addparty(){
+          var marker = new google.maps.Marker({
+          position: {
+              lat: 40.7412,
+              lng:-73.9896
+          },
+          map: map
+        });
+
+        andy = new google.maps.Marker({
+          position: {
+              lat: 40.7850,
+              lng:-73.9682
+          },
+          map: map
+        });
+
+        
+        var contentString = '<div id="content">'+
+            '<div id="siteNotice">'+
+            '</div>'+
+            '<h1 id="firstHeading" class="firstHeading">Amir Birthday Bash </h1>'+
+            '<div id="bodyContent">'+
+            '<p><b>Age:21+</b>1120 Broadstreet <b></b>  ' +
+            '</p>'+
+            '<p> Get Tickets: <a href="https://amasc4.github.io/">'+
+            'Eventbrite/</a> '+
+            '(last visited June 22, 2017).</p>'+
+            '</div>'+
+            '</div>';
+
+        var infowindow = new google.maps.InfoWindow({
+          content: contentString
+        });
+
+        andy.addListener('click', function() {
+          infowindow.open(map, andy);
+        });
+      }
+
+      var database = firebase.database().ref();
+
+        database.push(andy);
+            
+
+
+      function handleLocationError(browserHasGeolocation, infoWindow, pos) {
+        infoWindow.setPosition(pos);
+        infoWindow.setContent(browserHasGeolocation ?
+                              'Error: The Geolocation service failed.' :
+                              'Error: Your browser doesn\'t support geolocation.');
+
+        infoWindow.open(map);
+      }
+      
+
+    </script>
+    
+       <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCzUtkI2umg5tdd8stHoSMIEuOSLK_uyj4&callback=initMap">
+    </script>
+					
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.poptrox.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+			<script src="assets/js/yardi.js"></script>
+
+ <!--<div class="signs">
+        <div class="g-signin2" data-onsuccess="onSignIn"></div>
+        <a href="#" class="signOut" onclick="onSignOut();">Sign out</a>
+    </div>-->
+
+
+
+						</div>
+
+
+
+    <!--<div class ="mainContainer">
+        <!Text greeting user
+        <header>
+            <h1>WELCOME <span class="userName">USER_NAME</span></h1>    
+        </header
+
+         Populate section with user data
+        <section>
+            picture
+            <div class = "userImg">
+                <img src="assets/placeholder.png">
+            </div>
+
+            User Data
+            <div class="userData">
+                <h2>E-MAIL:</h2>
+                <p class="email">example@example.com</p>
+            div-->
+        </section>
+    </div>
+
+</div>
+	</body>
+</html>

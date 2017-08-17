@@ -95,7 +95,7 @@ h1 {
 	color:#7a2e40;
 	margin:0 0 10px;
 	padding-bottom:10px;
-	font:normal 17px Georgia, serif;
+	font:normal 40px 'Tangerine', serif;
 	border-bottom:1px solid #efece7;
 }
 
@@ -103,7 +103,7 @@ h2 {
 	color:#7a2e40;
 	margin:20px 0 10px;
 	padding-bottom:10px;
-	font:normal 17px Georgia, serif;
+	font:normal 40px 'Tangerine', serif;
 	border-bottom:1px solid #efece7;
 }
 
@@ -111,7 +111,7 @@ h3 {
 	color:#7a2e40;
 	margin:10px 0;
 	padding-bottom:10px;
-	font:bold 14px Arial, Helvetica, sans-serif;
+	font:bold 40px 'Tangerine', Helvetica, sans-serif;
 	border-bottom:1px solid #efece7;
 }
 
@@ -150,7 +150,7 @@ ul {
 
 #logo {
 	margin-bottom:20px;
-	font:normal 18px Georgia, serif;
+	font:normal 40px 'Tangerine', serif;
 	color:#fa7393;
 }
 
@@ -159,4 +159,10 @@ ul {
     width: 50%;
     border: 3px solid green;
     padding: 10px;
+}
+
+#body {
+  font-family: 'Tangerine', serif;
+  font-size: 28px;
+  text-shadow: 4px 4px 4px #aaa;
 }

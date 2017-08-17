@@ -11,4 +11,12 @@ function onSignIn(googleUser) {
         // The ID token you need to pass to your backend:
         var id_token = googleUser.getAuthResponse().id_token;
         console.log("ID Token: " + id_token);
+
       };
+$.ajax({
+  url: 'http://quotesondesign.com/wp-json/posts?filter[orderby]=rand',
+  success: function(data){
+    {var info=data.
+  $("body").append("<h1></h1>")
+  
+});
